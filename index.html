@@ -2,289 +2,328 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Sara | IT Student Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background 0.3s, color 0.3s;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        body.dark {
-            background: #121212;
-            color: #e0e0e0;
-        }
-        /* NAVBAR */
-        
-        nav {
-            background: #111;
-            color: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        body.dark nav {
-            background: #1f1f1f;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        nav a:hover {
-            color: #00adb5;
-        }
-        
-        .controls button {
-            margin-left: 5px;
-            padding: 6px 10px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-        /* HOME SECTION */
-        
-        .home {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            height: 90vh;
-            padding: 0 50px;
-        }
-        
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #00adb5;
-            flex-shrink: 0;
-        }
-        
-        body.dark .profile-photo {
-            border: 4px solid #00adb5;
-        }
-        
-        .home-text h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .home-text p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            padding: 12px 25px;
-            background: #00adb5;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        
-        body.dark .btn {
-            background: #00adb5;
-            color: white;
-        }
-        /* SECTIONS */
-        
-        section {
-            padding: 60px 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        
-        section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        /* CARDS */
-        
-        .skills-container,
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill,
-        .project {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .skill:hover,
-        .project:hover {
-            transform: translateY(-5px);
-        }
-        
-        body.dark .skill,
-        body.dark .project {
-            background: #1e1e1e;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        /* CONTACT */
-        
-        #contact p {
-            text-align: center;
-            margin: 10px 0;
-        }
-        
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        
-        body.dark footer {
-            background: #1f1f1f;
-        }
-        /* Responsive */
-        
-        @media(max-width: 900px) {
-            .home {
-                flex-direction: column;
-                text-align: center;
-            }
-            .home-text h1 {
-                font-size: 2.2rem;
-            }
-            .home-text p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Sara | IT Student Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    body.dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #111;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    body.dark nav {
+      background: #1f1f1f;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    .controls button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* HOME SECTION */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      height: 70vh;
+      padding: 80px 50px 40px;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00adb5;
+      flex-shrink: 0;
+    }
+
+    body.dark .profile-photo {
+      border: 4px solid #00adb5;
+    }
+
+    .home-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .home-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #00adb5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    body.dark .btn {
+      background: #00adb5;
+      color: white;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* CARDS */
+    .skills-container,
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill,
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover,
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    body.dark .skill,
+    body.dark .project {
+      background: #1e1e1e;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* CONTACT */
+    #contact p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    body.dark footer {
+      background: #1f1f1f;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .home-text p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <h2>Sara</h2>
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Sara</h2>
 
-        <ul>
-            <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
-            <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
-            <li><a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a></li>
-            <li><a href="#projects" data-en="Projects" data-fr="Projets">Projects</a></li>
-            <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
-        </ul>
+    <ul>
+      <li><a href="#home" data-en="Home" data-fr="Accueil" data-de="Startseite">Home</a></li>
+      <li><a href="#about" data-en="About" data-fr="À propos" data-de="Über mich">About</a></li>
+      <li><a href="#skills" data-en="Skills" data-fr="Compétences" data-de="Fähigkeiten">Skills</a></li>
+      <li><a href="#projects" data-en="Projects" data-fr="Projets" data-de="Projekte">Projects</a></li>
+      <li><a href="#contact" data-en="Contact" data-fr="Contact" data-de="Kontakt">Contact</a></li>
+    </ul>
 
-        <div class="controls">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('fr')">FR</button>
-            <button onclick="toggleDark()">🌙</button>
-        </div>
-    </nav>
+    <div class="controls">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('fr')">FR</button>
+      <button onclick="setLanguage('de')">DE</button>
+      <button onclick="toggleDark()">🌙</button>
+    </div>
+  </nav>
 
-    <!-- HOME -->
-    <section id="home" class="home">
-        <img src="sara.jpg" alt="Sara Photo" class="profile-photo">
+  <!-- HOME -->
+  <section id="home" class="home">
+    <img src="sara.jpg.jpg" alt="Sara Photo" class="profile-photo">
 
-        <div class="home-text">
-            <h1 data-en="Hello, my name's Sara " data-fr="Salut, je suis Sara ">Hi, my name's Sara </h1>
-            <p data-en="IT Student | Learning Programming & Web Development" data-fr="Étudiante en informatique | Apprentissage du développement">
-                IT Student | Learning Programming & Web Development
-            </p>
-            <a href="Sara-CV.pdf" download class="btn" data-en="Download CV" data-fr="Télécharger le CV">Download CV</a>
-        </div>
-    </section>
+    <div class="home-text">
+      <h1 data-en="Hello, my name's Sara"
+          data-fr="Salut, je suis Sara"
+          data-de="Hallo, ich heiße Sara">
+        Hello, my name's Sara
+      </h1>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2 data-en="About Me" data-fr="À propos de moi">About Me</h2>
-        <p data-en="I am an IT student passionate about programming and technology. My goal is to become a professional developer." data-fr="Je suis étudiante en informatique, passionnée par la programmation et la technologie. Mon objectif est de devenir développeuse professionnelle.">
-            I am an IT student passionate about programming and technology.
+      <p data-en="IT Student | Learning Programming & Web Development"
+         data-fr="Étudiante en informatique | Apprentissage du développement"
+         data-de="IT-Studentin | Lernen von Programmierung und Webentwicklung">
+        IT Student | Learning Programming & Web Development
+      </p>
+
+      <a href="Sara-CV.pdf" download class="btn"
+         data-en="Download CV"
+         data-fr="Télécharger le CV"
+         data-de="Lebenslauf herunterladen">
+        Download CV
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 data-en="About Me" data-fr="À propos de moi" data-de="Über mich">About Me</h2>
+
+    <p data-en="I am an IT student passionate about programming and technology. My goal is to become a professional developer."
+       data-fr="Je suis étudiante en informatique, passionnée par la programmation et la technologie. Mon objectif est de devenir développeuse professionnelle."
+       data-de="Ich bin IT-Studentin und interessiere mich für Programmierung und Technologie. Mein Ziel ist es, professionelle Entwicklerin zu werden.">
+      I am an IT student passionate about programming and technology.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 data-en="My Skills" data-fr="Mes compétences" data-de="Meine Fähigkeiten">My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">C</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 data-en="My Projects" data-fr="Mes projets" data-de="Meine Projekte">My Projects</h2>
+
+    <div class="projects-container">
+      <div class="project">
+        <h3>Calculator</h3>
+        <p data-en="Simple calculator using HTML, CSS and JavaScript."
+           data-fr="Calculatrice simple avec HTML, CSS et JavaScript."
+           data-de="Einfacher Rechner mit HTML, CSS und JavaScript.">
+          Simple calculator using HTML, CSS and JavaScript.
         </p>
-    </section>
+      </div>
 
-    <!-- SKILLS -->
-    <section id="skills">
-        <h2 data-en="My Skills" data-fr="Mes compétences">My Skills</h2>
-        <div class="skills-container">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Python</div>
-            <div class="skill">C</div>
-            <div class="skill">Git & GitHub</div>
-        </div>
-    </section>
+      <div class="project">
+        <h3>Student Management</h3>
+        <p data-en="C program to manage student records."
+           data-fr="Programme en C pour gérer les étudiants."
+           data-de="C-Programm zur Verwaltung von Studentendaten.">
+          C program to manage student records.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2 data-en="My Projects" data-fr="Mes projets">My Projects</h2>
-        <div class="projects-container">
-            <div class="project">
-                <h3>Calculator</h3>
-                <p data-en="Simple calculator using HTML, CSS and JavaScript." data-fr="Calculatrice simple avec HTML, CSS et JavaScript.">
-                    Simple calculator using HTML, CSS and JavaScript.
-                </p>
-            </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 data-en="Contact Me" data-fr="Me contacter" data-de="Kontakt">Contact Me</h2>
 
-            <div class="project">
-                <h3>Student Management</h3>
-                <p data-en="C program to manage student records." data-fr="Programme en C pour gérer les étudiants.">
-                    C program to manage student records.
-                </p>
-            </div>
-        </div>
-    </section>
+    <p data-en="Email: saratazi502@gmail.com"
+       data-fr="Email : saratazi502@gmail.com"
+       data-de="E-Mail: saratazi502@gmail.com">
+      Email: saratazi502@gmail.com
+    </p>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2 data-en="Contact Me" data-fr="Me contacter">Contact Me</h2>
-        <p>Email: yourname@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
-    </section>
+    <p data-en="GitHub: github.com/saratazi"
+       data-fr="GitHub : github.com/saratazi"
+       data-de="GitHub: github.com/saratazi">
+      GitHub: github.com/saratazi
+    </p>
 
-    <footer>
-        <p>© 2026 Sara | IT Student</p>
-    </footer>
+    <p data-en="LinkedIn: linkedin.com/in/saratazi"
+       data-fr="LinkedIn : linkedin.com/in/saratazi"
+       data-de="LinkedIn: linkedin.com/in/saratazi">
+      LinkedIn: linkedin.com/in/saratazi
+    </p>
+  </section>
 
-    <script>
-        function setLanguage(lang) {
-            document.querySelectorAll("[data-en]").forEach(el => {
-                el.textContent = el.getAttribute("data-" + lang);
-            });
-        }
+  <footer>
+    <p>© 2027 Sara | IT Student</p>
+  </footer>
 
-        function toggleDark() {
-            document.body.classList.toggle("dark");
-        }
-    </script>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        const v = el.getAttribute("data-" + lang);
+        if (v) el.textContent = v;
+      });
+    }
+
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 
 </body>
-
 </html>
